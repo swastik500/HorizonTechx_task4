@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nova | Python Chatbot</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="logo">✦</div><div><h1>Nova</h1><span>PYTHON CHATBOT</span></div></div>
+      <button class="new-chat" id="newChat">＋ New conversation</button>
+      <div class="side-label">QUICK PROMPTS</div>
+      <button class="prompt" data-message="Tell me a joke">🎭 Tell me a joke</button>
+      <button class="prompt" data-message="Give me a random fact">🌍 Random fact</button>
+      <button class="prompt" data-message="What can you do?">✨ What can you do?</button>
+      <button class="prompt" data-message="Calculate 125 * 48">🧮 Try calculator</button>
+      <div class="sidebar-bottom"><span class="status-dot"></span> Nova is online <span class="version">v1.0</span></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="mobile-brand"><div class="logo">✦</div><strong>Nova</strong></div>
+        <div class="top-status"><span class="status-dot"></span> Rule-based assistant</div>
+        <button id="clearChat" class="clear-btn" title="Clear conversation">↻ <span>Reset</span></button>
+      </header>
+
+      <section class="chat-area" id="chatArea">
+        <div class="welcome" id="welcome">
+          <div class="hero-logo">✦</div>
+          <h2>Hey, I'm Nova.</h2>
+          <p>Your Python-powered chat companion.<br/>What would you like to explore today?</p>
+          <div class="suggestions">
+            <button data-message="Hello!">👋 <span><b>Say hello</b><small>Start a conversation</small></span></button>
+            <button data-message="How are you?">💬 <span><b>Ask how I am</b><small>Let's chat</small></span></button>
+            <button data-message="What time is it?">🕒 <span><b>Current time</b><small>Check the clock</small></span></button>
+            <button data-message="I'm feeling bored">🎲 <span><b>I'm bored</b><small>Find something fun</small></span></button>
+          </div>
+        </div>
+        <div id="messages" class="messages"></div>
+      </section>
+
+      <footer class="composer-wrap">
+        <form id="chatForm" class="composer">
+          <textarea id="messageInput" rows="1" placeholder="Message Nova..." autocomplete="off"></textarea>
+          <button type="submit" id="sendBtn" aria-label="Send message">↑</button>
+        </form>
+        <div class="disclaimer">Nova uses programmed rules and responses. It is not a generative AI model.</div>
+      </footer>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
